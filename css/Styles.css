@@ -1,0 +1,35 @@
+/*
+esto es un comentario
+
+regla de css para el tag h1
+*/
+/* selector de etiquetas, solo afecta a la etiqueta */
+
+h1 {
+    color: red;
+    display: inline;
+}
+/* creo otra regla que afecta al h3 */
+/* selector de etiqueta h3 */
+
+h3 {
+    color: blue;
+}
+h4 {
+    color: green;
+}
+/* para afectar que un h4 no quede verde */
+/* selector de id o selector por id*/
+#grupos {
+    color:blueviolet;
+}
+/*ESPECIFICIDAD*/
+/*ID > TAG (EL ID ES MAYOR EN IMPORTANCIA A LA ETIQUETA
+!important > inline(es el atributo en html) > id > clase > etiqueta*/
+
+/* Selector por clase: Permite aplicar a diferentes tipos de etiqueta un mismo 
+comportamiento o cantidad de estilo */
+.textoFuerte {
+    font-size: 25px;
+    color:aqua; /* si quiero que supere la especificidad debo colocar !important;*/
+}

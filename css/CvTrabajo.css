@@ -1,0 +1,21 @@
+.centro {
+    background-color: #07444fb6;
+    display: inline-block;
+    width: 100%;
+}
+.centro h1 {
+    display: inline-block;
+    text-align: right;
+    background-color: aqua;
+
+    
+}
+.avatar {
+    border: 1px solid black;
+    width: 15vw;
+    border-radius: 20%;
+     }
+
+
+
+
