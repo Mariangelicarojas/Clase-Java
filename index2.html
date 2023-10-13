@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <section class="row">
+        <div class="col-12 m-5">
+            <button 
+                type="button"
+                class="btn btn-success"
+                onclick="alert('Hola')">
+                Saludar
+            </button>
+            <button 
+                type="button"
+                class="btn btn-info"
+                onclick="prompt('Ingrese su nombre')">
+                Nombre
+            </button>
+            <button 
+                type="button"
+                class="btn btn-primary"
+                onclick="confirm('¿Confirma algo?')">
+                Confirmar
+            </button>
+            <button 
+                type="button"
+                class="btn btn-danger"
+                onclick="console.log('HOLA MUNDO JS')">
+                Enviar por Consola
+            </button>
+        </div>
+    </section>
+    <script>
+        /*todo lo ponga acá es javascript*/
+        //fuciones nativas de javascript: viene de fabrica        
+        //y andan en todos los browser
+        // alert('cargando');
+        //prompt('Ingresá tu nombre');
+        // confirm('¿Te gusta el curso?');
+        //console.log('Primer dia de javascript');
+        let nombreIngresadoPorTeclado = prompt('Ingresá tu nombre');
+        console.log(nombreIngresadoPorTeclado);
+    </script>
+</body>
+</html>
