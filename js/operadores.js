@@ -29,7 +29,7 @@ document.getElementById('res').innerHTML=resultado2;
 }*/
 
 //Si quiero utilizar DOM
-function sumar(){
+/*function sumar(){
     let valor1 = getValueById('valor 1'); 
     let valor2 = getValueById('valor 2'); 
     let resultado = Number(valor1) + Number(valor2);
@@ -43,7 +43,7 @@ let resultado2 = Number(valor5) - Number(valor6);
 console.log(resultado2);
 }*/
 
-function restar(){
+/*function restar(){
     let valor1 = getValueById('valor 1'); 
     let valor2 = getValueById('valor 2'); 
     let resultado = Number(valor1) - Number(valor2);
@@ -75,5 +75,45 @@ function restar(){
 }
 
 function actualizarContenido(id,nuevoContenido){
+  document.getElementById(id).innerHTML = nuevoContenido;
+}
+
+
+/*
+    OPERADOR ARITMETICOS
+
+    + suma
+    - resta
+    / division
+    * multiplicacion
+*/
+function sumar(valor1,valor2) {    
+  return Number(valor1) + Number(valor2);
+}
+
+function restar(valor1,valor2) {
+  return Number(valor1) - Number(valor2);        
+}
+function calcular(operacion) {
+  let valor1 = getValueById('valor1');//1
+  let valor2 = getValueById('valor2');//
+  let resultado = '';
+  if(valor1 !== '' && valor2 !== '') {
+      //quiero saber que operacion realizar
+      if(operacion === '+') {
+          //invoco la funcion sumar
+          resultado = sumar(valor1,valor2);
+      }else {
+          resultado = restar(valor1,valor2);
+      }
+  }
+  actualizarContenido('res',resultado);
+}
+
+function getValueById(id) {
+  //defino una constante
+  return document.getElementById(id).value;
+}
+function actualizarContenido(id,nuevoContenido) {
   document.getElementById(id).innerHTML = nuevoContenido;
 }
