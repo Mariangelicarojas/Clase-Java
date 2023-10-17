@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operadores</title>
+    
 </head>
 <body>
     <div>
@@ -16,21 +17,18 @@
     </div>
 
 
-    <button onclick="sumar()"> <!--onclick="alert('Hola Mundo')" esto es otro ejemplo de onclick--> 
+    <button onclick="calcular('+')"> <!--onclick="alert('Hola Mundo')" esto es otro ejemplo de onclick--> 
         +
+    </button>
+    <button onclick="restar('-')">
+        -
     </button>
 
     <div id="res">
-        +
+       --
     </div>
-    <button onclick="restar()">
-        -
-    </button>
-    <div id="res"> 
-        -- 
-    </div>
-
-    <!--todos los script antes de cerrar el body-->
-    <script src="/js/operadores.js"></script>
+    
+       <!--todos los script antes de cerrar el body-->
+    <script src="js/operadores.js"></script>
 </body>
 </html>

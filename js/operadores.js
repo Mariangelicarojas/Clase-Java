@@ -30,11 +30,10 @@ document.getElementById('res').innerHTML=resultado2;
 
 //Si quiero utilizar DOM
 function sumar(){
-    let valor1 = document.getElementById('valor 1').value; 
-    let valor2 = document.getElementById('valor 2').value; 
+    let valor1 = getValueById('valor 1'); 
+    let valor2 = getValueById('valor 2'); 
     let resultado = Number(valor1) + Number(valor2);
-    //alert(resultado2); si quiero que el usuario vea una alerta
-    document.getElementById('res').innerHTML=resultado;
+    actualizarContenido('res', resultado);
     }
 
 /*function restar(){
@@ -45,9 +44,36 @@ console.log(resultado2);
 }*/
 
 function restar(){
-    let valor1 = document.getElementById('valor 1').value; 
-    let valor2 = document.getElementById('valor 2').value; 
+    let valor1 = getValueById('valor 1'); 
+    let valor2 = getValueById('valor 2'); 
     let resultado = Number(valor1) - Number(valor2);
-    //alert(resultado2); si quiero que el usuario vea una alerta
-    document.getElementById('res').innerHTML=resultado;
+    actualizarContenido('res', resultado);
+    
+
+    if(valor1 !== '' &&  valor2 !==''){
+      let resultado = Number(valor1) - Number(valor2);
+      actualizarContenido('res',resultado);
+    }else {
+      actualizarContenido('res','');
     }
+    
+  }
+
+    function calcular(operacion){
+  
+  if(operacion === '+'){
+    sumar();
+  }else {
+    restar();
+  }
+  }
+
+
+ function getValueById(id){
+    const valor= document.getElementById(id).value;
+    return valor;
+}
+
+function actualizarContenido(id,nuevoContenido){
+  document.getElementById(id).innerHTML = nuevoContenido;
+}
