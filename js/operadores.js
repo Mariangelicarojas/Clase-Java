@@ -95,9 +95,10 @@ function restar(valor1,valor2) {
   return Number(valor1) - Number(valor2);        
 }
 function calcular(operacion) {
-  let valor1 = getValueById('valor1');//1
-  let valor2 = getValueById('valor2');//
+  let valor1 = getValueById('valor1');
+  let valor2 = getValueById('valor2');
   let resultado = '';
+  
   if(valor1 !== '' && valor2 !== '') {
       //quiero saber que operacion realizar
       if(operacion === '+') {
@@ -111,7 +112,7 @@ function calcular(operacion) {
 }
 
 function getValueById(id) {
-  //defino una constante
+  //Si lo tengo que crear y devolver, entonces solo lo devuelvo
   return document.getElementById(id).value;
 }
 function actualizarContenido(id,nuevoContenido) {
